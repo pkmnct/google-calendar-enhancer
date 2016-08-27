@@ -1,0 +1,36 @@
+.neb-when-label {
+    display: none !important;
+}
+.cpchip {
+    line-height: 1.4 !important;
+}
+.ctdiv {
+    max-height: 100% !important;
+}
+.cbrd {
+    border-left: 2px solid !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    padding-top: 4px !important;
+    box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.6) !important;
+}
+.mask {
+    display: none !important;
+}
+.tg-today {
+    background-color: #F2F8FE !important;
+}
+.chip-caption {
+    display: none !important;
+}
+.tg-times-pri {
+    position: absolute !important;
+    top: -6px !important;
+    font-weight: bold !important;
+    border: none !important;
+    padding-left: 20px !important;
+}
+.tg-time-pri {
+    border: none !important;
+}
