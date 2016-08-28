@@ -1,9 +1,3 @@
-/*
- * Function to create the buttons and their handlers
- */
-function addButtons() {
-	
-}
 /* 
  * Functions to expand/collapse the Google bar
  */
