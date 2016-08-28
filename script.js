@@ -63,10 +63,3 @@ if (localStorage.getItem("menuExpanded") == "false") {
 if (localStorage.getItem("searchExpanded") == "false") {
 	collapseSearch();
 }
-
-// Load the CSS file
-var style = document.createElement('link');
-style.rel = 'stylesheet';
-style.type = 'text/css';
-style.href = chrome.extension.getURL('style.css');
-(document.head||document.documentElement).appendChild(style);

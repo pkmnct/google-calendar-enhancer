@@ -8,7 +8,7 @@
     max-height: 100% !important;
 }
 .cbrd {
-    border-left: 2px solid !important;
+    border-left-width: 2px !important;
     border-right: none !important;
     border-top: none !important;
     border-bottom: none !important;
