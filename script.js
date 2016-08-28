@@ -65,13 +65,18 @@ if (localStorage.getItem("searchExpanded") == "false") {
 }
 
 // Make the times in the sidebar look prettier.
-var timesToReplace = document.getElementsByClassName("tg-time-pri");
-for (var i = 0; i < timesToReplace.length; i++) {
-	if (i == 0) {
-		timesToReplace[i].innerHTML = "";
-	} else if (i <= 12) {
-		timesToReplace[i].innerHTML = i + " AM";
-	} else {
-		timesToReplace[i].innerHTML = i - 12 + " PM";
-	}
-}
+window.onload = function() {
+	window.setTimeout(function () {
+		// If we don't wait for the page to load and some additional time, the time format doesn't stick.
+		var timesToReplace = document.getElementsByClassName("tg-time-pri");
+		for (var i = 0; i < timesToReplace.length; i++) {
+			if (i == 0) {
+				timesToReplace[i].innerHTML = "";
+			} else if (i <= 12) {
+				timesToReplace[i].innerHTML = i + " AM";
+			} else {
+				timesToReplace[i].innerHTML = i - 12 + " PM";
+			}
+		}
+	}, 800);
+};
