@@ -1,16 +1,16 @@
-/* 
- * Functions to expand/collapse the Google bar
- */
+// Function to expand the Google bar
 function expandSearch() {
 	document.getElementById('onegoogbar').style.display = 'inherit';
 	localStorage.setItem("searchExpanded",true);
 }
 
+// Function to collapse the Google bar
 function collapseSearch() {
 	document.getElementById('onegoogbar').style.display = 'none';
 	localStorage.setItem("searchExpanded",false);
 }
 
+// Function to either expand/collapse the Google bar depending on the localStorage value.
 function expandCollapseSearch() {
 	if (localStorage.getItem("searchExpanded") == "false") {
 		expandSearch();
@@ -18,21 +18,22 @@ function expandCollapseSearch() {
 		collapseSearch();
 	}
 }
-/* 
- * Functions to expand/collapse the sidebar
- */
+
+// Function to expand the sidebar.
 function expandMenu() {
 	document.getElementById('nav').style.display = 'inherit';
 	document.getElementById('mainbody').style.marginLeft = '184px';
 	localStorage.setItem("menuExpanded",true);
 }
 
+// Function to collapse the sidebar.
 function collapseMenu() {
 	document.getElementById('nav').style.display = 'none';
 	document.getElementById('mainbody').style.marginLeft = '10px';
 	localStorage.setItem("menuExpanded",false);
 }
 
+// Function to expand/collapse the sidebar depending on the localStorage value.
 function expandCollapseMenu() {
 	if (localStorage.getItem("menuExpanded") == "false") {
 		expandMenu();
