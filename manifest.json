@@ -3,7 +3,7 @@
 
   "name": "Google Calender Enhancer",
   "description": "Makes Google Calender act more like Sunrise Calendar",
-  "version": "0.2",
+  "version": "0.3",
   "author":"George Walker",
   
   "icons":{"128":"icon.png"},
