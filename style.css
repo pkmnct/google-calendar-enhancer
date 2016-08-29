@@ -85,3 +85,8 @@
 #topLeftNavigation {
     left: 25px !important;
 }
+
+/* Change the location of notifications to appear correctly when the search bar is hidden */
+.mbox {
+    padding-top: 20px;
+}
