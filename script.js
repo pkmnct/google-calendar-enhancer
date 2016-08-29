@@ -81,6 +81,26 @@ function addMenuButtons() {
 addMenuButtons();
 
 
+// Make the times in the sidebar look prettier.
+function makeTimesPretty() {
+	if (document.getElementsByClassName('times-pretty').length == 0) {
+		var timesToReplace = document.getElementsByClassName("tg-time-pri");
+		timesToReplace[0].parentElement.parentElement.classList.add("times-pretty");
+		for (var i = 0; i < timesToReplace.length; i++) {
+			if (i == 0) {
+				timesToReplace[i].innerHTML = "";
+			} else if (i <= 12) {
+				timesToReplace[i].innerHTML = i + " AM";
+			} else {
+				timesToReplace[i].innerHTML = i - 12 + " PM";
+			}
+		}
+	}
+	// Make sure the times are always pretty.
+	setTimeout(makeTimesPretty, 100);
+}
+makeTimesPretty();
+
 // Collapse what was collapsed before
 if (localStorage.getItem("menuExpanded") == "false") {
 	collapseMenu();

@@ -47,11 +47,17 @@
     padding-left: 20px !important;
 }
 
+/* If the times are updated to the pretty format, change the padding to match */
+.times-pretty {
+    padding-left: 15px !important;
+}
+
 /* Remove the borders from the sidebar */
 .tg-time-pri {
     border: none !important;
 }
 
+/* Styles for the menu button */
 .nav-enhancer-menu {
     background: url(https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/src/android-menu.svg) no-repeat;
     background-size: contain;
@@ -62,17 +68,20 @@
     margin-right: 8px;
 }
 
+/* Styles for the search button */
 .nav-search-menu {
     background: url(https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/src/android-search.svg) no-repeat;
     background-size: contain;
     margin-left: 14px;
 }
 
+/* Styles for the last added menu button */
 .enhancer-menu-last {
     padding-right: 20px;
     padding-left: 7px;
 }
 
+/* Change the location of the top left navigtion */
 #topLeftNavigation {
     left: 25px !important;
 }
