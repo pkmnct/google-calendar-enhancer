@@ -50,33 +50,42 @@ var applogo = document.getElementsByClassName('applogo')[0];
 applogo.parentNode.removeChild(applogo);
 
 
+// Function to check if the 
+
+
 // Function to add the menu buttons
 function addMenuButtons() {
-	// Check if the buttons are already added
-	if ((document.getElementById('nav-enhancer-menu')) == null) {
-	
-		// Create the buttons
-		var theMenuText = '<div id="nav-enhancer-menu" tabindex="0" role="button" title="Menu" class="navbuttonouter goog-inline-block"><div class="navbutton nav-enhancer-menu goog-inline-block"></div></div>'
-		var theSearchMenuText = '<div id="nav-search-menu" tabindex="0" role="button" title="Menu" class="navbuttonouter goog-inline-block"><div class="navbutton nav-search-menu goog-inline-block"></div></div>'
+	try {
+		// Check if the buttons are already added
+		if ((document.getElementById('nav-enhancer-menu')) == null) {
 		
-		// Set a variable for the area we are adding the buttons
-		var topLeftNavigation = document.getElementById('topLeftNavigation').getElementsByTagName('tr')[0];
-		
-		// Add the buttons
-		var theSearchMenu = topLeftNavigation.insertCell(0);
-		theSearchMenu.innerHTML = theSearchMenuText;
-		theSearchMenu.classList.add("enhancer-menu-last");
-		var theMenu = topLeftNavigation.insertCell(0);
-		theMenu.innerHTML = theMenuText;
-		
-		// Add Event Listener for the menu button.
-		document.getElementById("nav-enhancer-menu").addEventListener('click', expandCollapseMenu, false);
+			// Create the buttons
+			var theMenuText = '<div id="nav-enhancer-menu" tabindex="0" role="button" title="Menu" class="navbuttonouter goog-inline-block"><div class="navbutton nav-enhancer-menu goog-inline-block"></div></div>'
+			var theSearchMenuText = '<div id="nav-search-menu" tabindex="0" role="button" title="Menu" class="navbuttonouter goog-inline-block"><div class="navbutton nav-search-menu goog-inline-block"></div></div>'
+			
+			// Set a variable for the area we are adding the buttons
+			var topLeftNavigation = document.getElementById('topLeftNavigation').getElementsByTagName('tr')[0];
+			
+			// Add the buttons
+			var theSearchMenu = topLeftNavigation.insertCell(0);
+			theSearchMenu.innerHTML = theSearchMenuText;
+			theSearchMenu.classList.add("enhancer-menu-last");
+			var theMenu = topLeftNavigation.insertCell(0);
+			theMenu.innerHTML = theMenuText;
+			
+			// Add Event Listener for the menu button.
+			document.getElementById("nav-enhancer-menu").addEventListener('click', expandCollapseMenu, false);
 
-		// Add Event Listener for the search button.
-		document.getElementById("nav-search-menu").addEventListener('click', expandCollapseSearch, false);
+			// Add Event Listener for the search button.
+			document.getElementById("nav-search-menu").addEventListener('click', expandCollapseSearch, false);
+		}
+		// Make sure the buttons are always there (if we change weeks it removes the buttons).
+		setTimeout(addMenuButtons, 100);
+	} catch (err) {
+		var pageLoadWait = 500;
+		console.log("Page still loading. Waiting " + (pageLoadWait / 1000) + " sec to trigger.")
+		setTimeout(addMenuButtons, 100);
 	}
-	// Make sure the buttons are always there (if we change weeks it removes the buttons).
-	setTimeout(addMenuButtons, 100);
 }
 addMenuButtons();
 
