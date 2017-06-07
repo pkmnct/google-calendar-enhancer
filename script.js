@@ -98,7 +98,7 @@ function makeTimesPretty() {
 		for (var i = 0; i < timesToReplace.length; i++) {
 			if (i == 0) {
 				timesToReplace[i].innerHTML = "";
-			} else if (i <= 12) {
+			} else if (i <= 11) {
 				timesToReplace[i].innerHTML = i + " AM";
 			} else {
 				timesToReplace[i].innerHTML = i - 12 + " PM";
